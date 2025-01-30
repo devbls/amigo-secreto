@@ -24,3 +24,15 @@ function adicionarAmigo() {
     atualizarLista();
   }
 }
+
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    return;
+  }
+  
+  let indiceAmigoSorteado = Math.floor(Math.random() * amigos.length);
+  let nomeSorteado = amigos[indiceAmigoSorteado];
+
+  let resultado = document.getElementById('resultado');
+  resultado.innerHTML = nomeSorteado;
+}
